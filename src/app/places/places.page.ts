@@ -7,7 +7,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PlacesPage implements OnInit {
 
-  private places = [
+  public places = [
     {
       id: '1',
       title: 'Eiffel Tower',
@@ -22,7 +22,7 @@ export class PlacesPage implements OnInit {
       imageURL: 'https://estatuadelalibertad.info/wp-content/uploads/2019/04/foto-estatua-de-la-libertad.jpg',
       comments: ['Awesome palce', 'wonderfull experience']
     },
-  ]
+  ];
 
 
   constructor() { }

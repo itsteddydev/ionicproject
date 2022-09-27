@@ -6,8 +6,11 @@
 
 <ion-content>
   <ion-list>
-    <div *ngFor="let place of places">
+    <ion-item *ngFor="let place of places" [routerLink]="['/places', place.id]">
+      <ion-avatar slot="start">
+        <ion-img [src]="place.imageURL"></ion-img>
+      </ion-avatar>
       {{place.title}}
-    </div>
+    </ion-item>
   </ion-list>
 </ion-content>
