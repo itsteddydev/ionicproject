@@ -7,11 +7,14 @@ import { PlacesService } from './places.service';
   styleUrls: ['./places.page.scss'],
 })
 export class PlacesPage implements OnInit {
-  places=[];
+  places = [];
 
   constructor(private placeService: PlacesService) { }
 
   ngOnInit() {
+    this.places = this.placeService.getPlaces();
+  }
+  ionViewWillEnter() {
     this.places = this.placeService.getPlaces();
   }
 

@@ -53,9 +53,10 @@ export class PlacesService {
     });
 
   }
-  //Eliminar un lugar
+  // //Eliminar un lugar
   deletePlace(placeId: string) {
-    this.places = this.places.filter(place => placeId !== placeId);
+    //console.log('Deleted');
+    this.places = this.places.filter(place => place.id !== placeId);
   }
 
 }
