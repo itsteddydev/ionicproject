@@ -5,7 +5,7 @@ import { Place } from './place.model';
 })
 export class PlacesService {
 
-  private places = [
+  private places: Place[] = [
     {
       id: '1',
       title: 'Eiffel Tower',
@@ -14,7 +14,7 @@ export class PlacesService {
       comments: ['Awesome palce', 'wonderfull experience']
     },
     {
-      id: '1',
+      id: '2',
       title: 'Statue of Liberty',
       // eslint-disable-next-line max-len
       imageURL: 'https://estatuadelalibertad.info/wp-content/uploads/2019/04/foto-estatua-de-la-libertad.jpg',
