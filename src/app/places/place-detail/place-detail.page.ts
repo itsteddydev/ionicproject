@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
+import { PlacesService } from '../places.service';
+import { Place } from '../place.model';
 
 @Component({
   selector: 'app-place-detail',
@@ -7,9 +10,17 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PlaceDetailPage implements OnInit {
 
-  constructor() { }
+  place: Place;
+  constructor(private activatedRoute: ActivatedRoute, private placeService: PlacesService) { }
 
   ngOnInit() {
+    this.activatedRoute.paramMap.subscribe(paramMap => {
+      //redirect
+      const recipeId = paramMap.get('placeId');
+      this.place = this.placeService.getPlace(recipeId);
+      console.log(this.place);
+    });
+
   }
 
 }
