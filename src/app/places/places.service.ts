@@ -20,6 +20,13 @@ export class PlacesService {
       imageURL: 'https://estatuadelalibertad.info/wp-content/uploads/2019/04/foto-estatua-de-la-libertad.jpg',
       comments: ['Awesome place', 'wonderfull experience']
     },
+    {
+      id: '3',
+      title: 'Awesome Place',
+      // eslint-disable-next-line max-len
+      imageURL: 'https://estatuadelalibertad.info/wp-content/uploads/2019/04/foto-estatua-de-la-libertad.jpg',
+      comments: []
+    },
   ];
 
   constructor() { }
